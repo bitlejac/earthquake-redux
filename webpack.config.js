@@ -32,11 +32,11 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: 'assets/css/',
-        to: '../dist/assets/css'
+        to: '../docs/assets/css'
       },
       {
         from: 'assets/img/',
-        to: '../dist/assets/img'
+        to: '../docs/assets/img'
       }
     ])
   ],
