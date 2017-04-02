@@ -36,7 +36,6 @@ const ListElem = (data) => {
                 <div className="list-elem-map">
                 </div>
                 <div>
-
                     <button onClick={ expandClick } className="expand-btn">  </button>
                 </div>
             </div>

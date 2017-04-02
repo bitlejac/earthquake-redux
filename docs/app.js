@@ -87,10 +87,6 @@
 	), document.getElementById('app'));
 	
 	store.dispatch((0, _action.fetchStart)(_initialState2.default.filter));
-	//todo remove
-	store.subscribe(function () {
-	    return console.log(store.getState());
-	});
 
 /***/ },
 /* 1 */
@@ -23304,7 +23300,7 @@
 	
 	var mapStateToProps = function mapStateToProps(store) {
 	    return {
-	        "switch": store.appState.switch
+	        switch: store.appState.switch
 	    };
 	};
 	
@@ -25063,7 +25059,6 @@
 	var Map = function Map(_ref) {
 	    var val = _ref.val;
 	
-	
 	    return _react2.default.createElement(
 	        "div",
 	        { className: "map-wrapper" },
@@ -25385,19 +25380,13 @@
 
 /***/ },
 /* 248 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
-	var _axios = __webpack_require__(213);
-	
-	var _axios2 = _interopRequireDefault(_axios);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = function (state, action) {
 	    switch (action.type) {
@@ -25423,4 +25412,5 @@
 
 /***/ }
 /******/ ]);
+//# sourceMappingURL=app.js.map
 //# sourceMappingURL=app.js.map

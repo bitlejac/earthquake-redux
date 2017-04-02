@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (store) => {
     return {
-        "switch" : store.appState.switch
+        switch : store.appState.switch
     }
 }
 

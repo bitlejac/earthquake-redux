@@ -7,14 +7,13 @@ import initialState from '../initialState.json'
 import configureStore from './store/configureStore'
 import { fetchStart } from './actions/action.js'
 
-let store = configureStore(initialState);
+let store = configureStore(initialState)
 
 Main.contextTypes = {
     store : React.PropTypes.object
 };
 
 ReactDOM.render(
-
     <Provider store={ store }>
         <Main switch={ store.getState().appState.switch }  />
     </Provider>,
@@ -22,5 +21,3 @@ ReactDOM.render(
 )
 
 store.dispatch(fetchStart(initialState.filter))
-//todo remove
-store.subscribe(() => console.log(store.getState()))

@@ -6,8 +6,6 @@ const mapStateToProps = (store) => {
     return {
         loading : store.loading
     }
-
-
 }
 
 const Container = connect(mapStateToProps)(Loader);

@@ -2,8 +2,6 @@ import React from 'react'
 
 const Loader = (loading) => {
 
-
-
     const returnLoadingClass = (loading) => {
         if(loading) {
             return 'loader-wrapper loading'
