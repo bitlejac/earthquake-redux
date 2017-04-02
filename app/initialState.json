@@ -1,0 +1,16 @@
+{
+  "appState": {
+    "switch" : "main list"
+  },
+  "filter": "1hour",
+
+  "data": {
+    "features": []
+  },
+
+  "errors": [
+
+  ],
+
+  "loading": false
+}

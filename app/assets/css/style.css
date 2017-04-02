@@ -1,0 +1,262 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #60a442;
+}
+
+a:hover {
+    color: #7cc05d;
+}
+
+.header {
+    width: 100%;
+    max-width: 1440px;
+    margin: 30px auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #999;
+    box-sizing: border-box;
+}
+
+.filters {
+    display: inline-block;
+}
+
+.filters select {
+    color: #fff;
+    background-color: #7cc05d;
+    border: 1px solid #60a442;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.filters select option {
+    padding: 10px 20px;
+}
+
+.switch {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+}
+
+.switch-btn {
+    padding: 10px 30px;
+    background-color: #7cc05d;
+    border: 1px solid #60a442;
+    color: #fff;
+}
+
+.main.map .list-wrapper {
+    display: none;
+}
+
+.main.list .map-wrapper {
+    display: none;
+}
+
+.map-wrapper {
+    max-width: 1440px;
+    height: 800px;
+    background: #fafafa;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+.list-wrapper {
+    margin: 20px auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.list-elem {
+    float: left;
+    width: 33.3%;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: all 250ms ease-in-out;
+    min-height: 250px;
+}
+
+.list-elem-inner {
+    width: 100%;
+    background: #fafafa;
+    position: relative;
+    padding: 10px;
+    min-height: 250px;
+    box-sizing: border-box;
+}
+
+.list-elem-inner h2 {
+    margin: 0 0 20px 0;
+
+}
+
+.list-elem-inner p {
+    margin: 0 0 15px 0;
+}
+
+.list-elem-inner p span {
+    color: #666666;
+}
+
+.list-elem:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.list-elem.expanded {
+    width: 100%;
+    height: 400px;
+}
+
+.list-elem.expanded .list-elem-inner {
+    width: 100%;
+
+    height: 380px;
+}
+
+.list-elem .list-elem-main {
+    float: left;
+    width: 100%;
+}
+
+.list-elem.expanded .list-elem-main {
+    float: left;
+    width: 30%;
+}
+
+.list-elem .expand-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: url(../img/cross.svg);
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all 500ms ease-in-out;
+}
+
+.list-elem .expand-btn:hover {
+    -ms-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+.list-elem.expanded .expand-btn {
+    transition: all 500ms ease-in-out;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.list-elem.expanded .expand-btn:hover {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.list-elem .list-elem-map {
+    display: none;
+    float: left;
+    width: 0;
+    height: 0;
+}
+
+.list-elem.expanded .list-elem-map {
+    display: block;
+    float: left;
+    width: 70%;
+    height: 350px;
+}
+
+.list-elem.expanded .list-elem-map iframe {
+    border: none;
+}
+
+.iframe-link {
+    overflow-x: hidden;
+}
+
+.loader-wrapper {
+    display: none;
+    transition: all 500ms ease-in-out;
+}
+
+.loader-wrapper.loading {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.loader-wrapper.loading div {
+    background: url(../img/loading.gif);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background-size: cover;
+
+}
+
+@media only screen and (max-width: 960px) {
+    .list-elem {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .list-elem {
+        width: 100%;
+    }
+
+    .list-elem.expanded .list-elem-map, .list-elem.expanded .list-elem-main {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .list-elem {
+        width: 100%;
+    }
+
+    .list-elem.expanded .list-elem-map, .list-elem.expanded .list-elem-main {
+        width: 100%;
+        float: none;
+    }
+
+    .list-elem .expand-btn {
+        top: 10px;
+        bottom: initial;
+    }
+
+    .list-elem.expanded .list-elem-inner {
+        width: 100%;
+        height: auto;
+    }
+
+    .list-elem.expanded {
+        height: auto;
+    }
+}
